@@ -1,16 +1,21 @@
 
 image:
   # image.registry is the repository where the ActiveMQ Artemis image is stored
-  registry: docker.io
+  ##registry: docker.io
+  registry: r.cfcr.io
   # image.repository is the ActiveMQ Artemis image name
-  repository: vromero/activemq-artemis
+  repository: lfurrea/activemq-artemis-docker
   # image.tag is the ActiveMQ Artemis image's tag: https://hub.docker.com/r/vromero/activemq-artemis/tags
-  # tag: 2.6.2
+  tag: master
   # image.pullPolicy is the ActiveMQ Artemis image's pull policy
   pullPolicy: Always
   # image.pullSecrets optionally specify an array of imagePullSecrets.Secrets must be manually created in the namespace.
   # ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-  pullSecrets: []
+  ##pullSecrets: []
+imageCredentials:
+  registry: r.cfcr.io
+  username: lfurrea
+  password: 54f153b46ad5f01815ba11a76e83fec8
 
 # artemisUser sets the artemis admin user name
 artemisUser: artemis
